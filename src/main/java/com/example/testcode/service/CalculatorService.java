@@ -1,14 +1,12 @@
 package com.example.testcode.service;
-
 import org.springframework.stereotype.Service;
-
 
 @Service
 
 public class CalculatorService {
 
     public String hello() {
-        return "Добро пожаловать в калькуляторю";
+        return "Добро пожаловать в калькулятор";
     }
 
     public int plus(int num1, int num2) {

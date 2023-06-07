@@ -1,6 +1,5 @@
-package com.example.testcode;
+package com.example.testcode.service;
 
-import com.example.testcode.service.CalculatorService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,6 +13,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class CalculatorServiceTest {
     private final CalculatorService calculatorService = new CalculatorService();
 
+
+    @Test
+    public void hello() {
+        String expected = "Добро пожаловать в калькулятор";
+         Assertions.assertEquals(expected,calculatorService.hello());
+    }
     @ParameterizedTest
     @MethodSource("plusTest")
     public void plusTest(int num1, int num2,int result){
