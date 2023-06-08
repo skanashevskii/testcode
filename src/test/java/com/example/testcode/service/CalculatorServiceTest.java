@@ -22,7 +22,7 @@ public class CalculatorServiceTest {
     @ParameterizedTest
     @MethodSource("plusTest")
     public void plusTest(int num1, int num2,int result){
-        Assertions.assertEquals(result,calculatorService.plus(num1,num2));
+        Assertions.assertEquals(result,calculatorService.plus(num1,num2),"Ошибка в тесте сложения");
     }
     @ParameterizedTest
     @MethodSource("minusTest")
